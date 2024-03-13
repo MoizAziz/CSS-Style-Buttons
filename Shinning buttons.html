@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .outer {
+            position: relative;
+            background: black;
+            transition: .5s;
+
+        }
+
+        .round {
+            height: 70px;
+            width: 220px;
+            border-radius: 50px;
+        }
+
+        .outer button,
+        .outer span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .outer button {
+            font-size: 20px;
+            border: none;
+            background-color: black;
+            color: white;
+            z-index: 9;
+        }
+
+        .round button {
+            height: 60px;
+            width: 210px;
+            border-radius: 50px;
+        }
+
+        .outer span {
+            height: 100%;
+            width: 100%;
+            background: inherit;
+
+        }
+
+        .round span {
+            border-radius: 50px;
+        }
+
+        .outer span:nth-child(1) {
+            filter: blur(7px);
+        }
+
+        .outer span:nth-child(2) {
+            filter: blur(14px);
+        }
+
+        .outer:hover {
+            animation: box 1s infinite linear;
+            background: linear-gradient(#14ffe9, #ffeb3b, #911eef);
+        }
+
+        @keyframes box {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="outer round">
+            <button>hover me</button>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>
