@@ -1,4 +1,4 @@
 # CSS style buttons
 
-### Here correct code of many styles of CSS buttons
+<p>Here you can get correct code of styling buttons</p>
  
